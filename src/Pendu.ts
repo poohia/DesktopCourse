@@ -1,5 +1,5 @@
 class Pendu {
-  static publicImagePath = "/assets/images/pendu/";
+  static publicImagePath = "./assets/images/pendu/";
   private imgHtml: HTMLImageElement;
   private step: number = 0;
   private images = [

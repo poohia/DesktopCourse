@@ -1,4 +1,5 @@
 import Game from "./Game";
+import "./cordova";
 import "./index.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
