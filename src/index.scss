@@ -1,3 +1,62 @@
-body {
-  background: violet;
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  h1,
+  h2 {
+    text-align: center;
+  }
+  .pendu-input-user {
+    margin-bottom: 20px;
+    form {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      label {
+        margin-bottom: 25px;
+        font-size: 3rem;
+      }
+      input {
+        border: none;
+        border-bottom: 2px solid black;
+        font-size: 4rem;
+        text-align: center;
+        outline: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .pendu-solution-header {
+    display: flex;
+    justify-content: space-around;
+    font-size: 5rem;
+    margin-bottom: 50px;
+  }
+  .pendu-solution-container {
+    display: flex;
+    #pendu-solution-container-content {
+      display: flex;
+      min-height: 30%;
+      font-size: 4rem;
+      div {
+        position: relative;
+        min-width: 4rem;
+        height: 4rem;
+        margin: 2px;
+        &:after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background-color: black;
+        }
+      }
+    }
+  }
+  .pendu-solution-container-pendu-view {
+    text-align: center;
+    flex: 1;
+  }
 }

@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 const path = require("path");
 
 module.exports = {
@@ -35,9 +36,15 @@ module.exports = {
       title: "Pendu",
       template: "src/index.html",
     }),
+    new CopyPlugin({
+      patterns: [{ from: "assets", to: "assets" }],
+    }),
   ],
   devServer: {
-    static: path.join(__dirname, "www"),
+    static: [
+      { directory: path.join(__dirname, "www") },
+      { directory: path.join(__dirname, "assets") },
+    ],
     compress: true,
     port: 4000,
   },
